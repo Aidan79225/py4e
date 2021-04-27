@@ -38,6 +38,7 @@ class Main:
         date = time.strftime("%Y/%m/%d")
         self.max_id += 1
         self.records.append(Record(self.max_id, name, float(temperature), unit, date))
+        self.print_datas(self.records)
 
     def remove_a_record(self):
         record_id = int(input("Please enter a id: "))
@@ -48,6 +49,7 @@ class Main:
                 break
         if record != None:
             self.records.remove(record)
+        self.print_datas(self.records)
 
     def save_file(self):
         file_name = input("Please enter filename: ")
