@@ -22,6 +22,7 @@ class Main:
             data = line.strip().split(',')
             self.records.append(Record(int(data[0]), data[1], float(data[2]), data[3], data[4]))
             self.max_id = max(int(data[0]), self.max_id)
+        self.print_datas(self.records)
 
     def print_datas(self, records: list):
         print("-------------Data-------------")
